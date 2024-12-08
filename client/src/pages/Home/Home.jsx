@@ -179,7 +179,7 @@ const Home = () => {
               isSearch
                 ? `Oops! No notes found matching your search.`
                 : `Start creating your first note! Click the 'Add' button to jot down your
-          thoughts, ideas, and reminders. Let's get started!`
+          thoughts, ideas, and reminders.`
             }
           />
         )}
