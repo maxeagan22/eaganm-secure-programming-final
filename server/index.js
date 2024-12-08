@@ -9,7 +9,9 @@ const { authenticateToken } = require("./utilities");
 const User = require("./models/user.model");
 const Note = require("./models/note.model");
 
-const connectionString = process.env.CONNECTION_STRING;
+const connectionString = process.env.CONNECTION_STRING || "mongodb://localhost:27017/localdb";
+const accessTokenSecret = process.env.ACCESS_TOKEN_SECRET || "local-secret";
+const port = process.env.PORT || 8000;
 
 mongoose
   .connect(connectionString, { useNewUrlParser: true, useUnifiedTopology: true })
