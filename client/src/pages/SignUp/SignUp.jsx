@@ -13,7 +13,7 @@ const SignUp = () => {
   const navigate = useNavigate();
 
   // Regex patterns
-  const nameRegex = /^[a-zA-Z\s]{2,50}$/; // Name must be 2-50 characters, alphabets, and spaces only.
+  const nameRegex = /^[a-zA-Z\s]{2,30}$/; // Name must be 2-30 characters, alphabets, and spaces only.
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Standard email regex.
   const passwordRegex = /^(?=.*[A-Z])(?=.*\d).{8,}$/; // Minimum 8 characters, 1 uppercase, 1 number.
 
@@ -22,7 +22,7 @@ const SignUp = () => {
 
     // Validate Name
     if (!nameRegex.test(name)) {
-      setError("Name must contain only letters and spaces (2-50 characters).");
+      setError("Name must contain only letters and spaces (2-30 characters).");
       return;
     }
 
